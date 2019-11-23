@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 from keras.models import Sequential
-from keras.layers import Dense, Conv2D, Flatten, MaxPooling2D
+from keras.layers import Dense, Conv2D, Flatten, MaxPooling2D, Dropout
 from keras import layers
 
 #download mnist data and split into train and test sets
@@ -32,16 +32,16 @@ print(np.shape(y_test))
 #create model
 model = Sequential()
 #add model layers
-model.add(Conv2D(32, (2,2), activation='relu', input_shape=(124, 13, 1)))
+model.add(Conv2D(32, (4,4), activation='relu', input_shape=(124, 13, 1)))
 model.add(MaxPooling2D((2,2)))
 
-model.add(Conv2D(64, (2,2), activation='relu'))
+model.add(Conv2D(64, (4,4), activation='relu'))
 model.add(MaxPooling2D((2,2)))
-
-# model.add(Conv2D(64, (3,3), activation='relu'))
 
 model.add(Flatten())
 model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(32, activation='relu'))
 model.add(Dense(5, activation='softmax'))
 
 #compile model using accuracy to measure model performance
