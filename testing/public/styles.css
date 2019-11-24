@@ -1,16 +1,56 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right top, #333381, #404895, #4e5ea8, #5d74bb, #6e8ace, #7591d5, #7b98dc, #829fe3, #8098df, #7e91dc, #7d89d7, #7c82d3);
+}
+
 h1 {
-<<<<<<< HEAD
     color: greenyellow;
 }
-h2{
+
+h2 {
     color: #D36DC5;
     margin: 1em;
 }
+
 .navbar-brand {
     font-size: 30px !important;
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: bold;
     color: #8D3481 !important;
-=======
     color: red;
+}
 
->>>>>>> cd181999eb55bfcf66b6f2d14fe8656aa94880c7
+.chart {
+    background-color: #8D3481;
+    max-height: 10px;
+}
+
+.pie {
+    position: relative;
+    border-radius: 6%;
+    background-color: white;
+    height: 450px;
+    top: 90px;
+    left: 30px;
+}
+
+.donut-chart {
+    position: relative;
+    left: -130px;
+    top: -70px;
+}
+
+.shadow {
+    box-shadow: 0 7px 15px 4px #00000015;
+}
+
+.gantt-chart {}
+
+.gantt {
+    border-radius: 6%;
+    background-color: white;
+    height: 450px;
+    max-width: 650px;
+    top: 90px;
+    left: -20px;
 }

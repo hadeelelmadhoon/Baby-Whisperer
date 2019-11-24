@@ -19,7 +19,7 @@ write('output.wav', fs, myrecording)  # Save as WAV file
 
 input('pause')
 
-recordingArray = mfccSingle('data/burping/10A40438-09AA-4A21-83B4-8119F03F7A11-1430925142-1.0-f-26-dc.wav')
+recordingArray = mfccSingle('data/hungry/1abb2260-a652-4ba7-bd98-7d463312730f-1430041727150-1.7-m-04-hu.wav')
 
 # load json and create model
 json_file = open('model.json', 'r')
