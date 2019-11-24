@@ -18,6 +18,7 @@ h4 {
     padding: 0;
     font-size: 20px;
     font-weight: bold;
+    color: rgb(83, 83, 83);
 }
 
 h6 {
@@ -62,12 +63,14 @@ h6 {
     background-color: #fffdf9;
     height: 350px;
     top: 10px;
-    left: 30px;
+    left: 55px;
+    margin-right: 3px;
+    max-width: 520px;
 }
 
 .donut-chart {
     position: relative;
-    left: -125px;
+    left: -105px;
     top: -75px;
 }
 
@@ -86,7 +89,8 @@ h6 {
     background-color: #fffdf9;
     height: 350px;
     top: 10px;
-    left: -20px;
+    margin-left: 20px;
+    max-width: 520px;
 }
 
 .overview {
@@ -138,4 +142,8 @@ h6 {
 .text-inside {
     position: relative;
     top: 50px;
+}
+
+.over {
+    margin-left: 25px;
 }

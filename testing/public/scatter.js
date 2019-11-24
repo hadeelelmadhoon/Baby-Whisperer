@@ -11,7 +11,8 @@ function drawChart() {
     var options = {
         backgroundColor: 'transparent',
         height: 300,
-        width: 600,
+        width: 550,
+        title: 'Daily Breakdown',
         vAxis: {
             title: 'Reason',
             minValue: 0,
