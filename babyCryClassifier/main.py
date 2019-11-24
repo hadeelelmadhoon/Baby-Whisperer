@@ -9,16 +9,16 @@ from scipy.io.wavfile import write
 from twilio.rest import Client
 from playsound import playsound
 
-# fs = 44100  # Sample rate
-# seconds = 7  # Duration of recording
-#
-# print("Recording now")
-#
-# myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
-# sd.wait()  # Wait until recording is finished
-# print("Recording ended")
-# write('output.wav', fs, myrecording)  # Save as WAV file
-#
+fs = 44100  # Sample rate
+seconds = 7  # Duration of recording
+
+print("Recording now")
+
+myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+sd.wait()  # Wait until recording is finished
+print("Recording ended")
+write('output.wav', fs, myrecording)  # Save as WAV file
+
 # input('pause')
 
 recordingArray = mfccSingle('data/tired/03ADDCFB-354E-416D-BF32-260CF47F7060-1433658024-1.1-f-04-ti.wav')
@@ -84,7 +84,7 @@ message = client.messages \
     .create(
          body='Your baby is crying! Reason: ' + reason,
          from_='+19384448141',
-         to='+12262398589'
+         to=''
      )
 
 print(message.sid)
