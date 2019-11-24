@@ -3,6 +3,22 @@ from mfccSingle import mfccSingle
 from pymongo import MongoClient
 from datetime import datetime
 
+import sounddevice as sd
+from scipy.io.wavfile import write
+from playsound import playsound
+
+fs = 44100  # Sample rate
+seconds = 7  # Duration of recording
+
+print("Recording now")
+
+myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+sd.wait()  # Wait until recording is finished
+print("Recording ended")
+write('output.wav', fs, myrecording)  # Save as WAV file
+
+input('pause')
+
 recordingArray = mfccSingle('data/burping/10A40438-09AA-4A21-83B4-8119F03F7A11-1430925142-1.0-f-26-dc.wav')
 
 # load json and create model
