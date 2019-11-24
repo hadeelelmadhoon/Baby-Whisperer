@@ -8,16 +8,25 @@ h1 {
 }
 
 h2 {
-    color: #D36DC5;
-    margin: 1em;
+    color: rgb(43, 43, 43);
+    font-size: 40px;
+    font-family: 'Heebo', sans-serif;
 }
 
 h4 {
     margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h6 {
+    color: rgb(83, 83, 83);
 }
 
 .navbar {
     background-color: rgba(232, 89, 79, 0.747) !important;
+    height: 60px;
 }
 
 .items {
@@ -35,7 +44,7 @@ h4 {
 }
 
 .navbar-brand {
-    font-size: 30px !important;
+    font-size: 28px !important;
     font-family: 'Domine', serif;
     font-weight: bold;
     color: #f6f6f6 !important;
@@ -87,12 +96,14 @@ h4 {
     max-width: 21%;
     border-radius: 2%;
     margin: 2%;
+    margin-top: 1%;
     background-color: #fffdf9;
+    text-align: center;
+    align-items: center;
 }
 
 .avg {
     align-items: center;
-    margin-top: 10px;
     padding: 0;
 }
 
@@ -107,7 +118,7 @@ h4 {
     background-color: #fffdf9;
     position: relative;
     left: 1100px;
-    top: 15px;
+    top: 30px;
     margin-bottom: 5px;
 }
 
@@ -117,4 +128,14 @@ h4 {
 
 .container {
     padding: 0;
+}
+
+.inside {
+    position: relative;
+    top: 50px;
+}
+
+.text-inside {
+    position: relative;
+    top: 50px;
 }

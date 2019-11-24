@@ -16,37 +16,37 @@ function drawChart() {
         backgroundColor: 'transparent',
         colors: ['#88BDBC', '#c8dad3', '#F4976C', '#ffdc82', '#E85A4F'],
         pieSliceTextStyle: {
-            color: 'grey',
+            color: 'white',
         },
         pieSliceText: 'label',
         legend: 'none'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
-    
+
     google.visualization.events.addListener(chart, 'error', (err) => console.log(err));
 
     // Track the frequency of each issue
-    var bellyache=0, discomfort=0, burping=0, tired=0, hungry=0;
-            
+    var bellyache = 0,
+        discomfort = 0,
+        burping = 0,
+        tired = 0,
+        hungry = 0;
+
     $.ajax({
         url: 'http://localhost:8080/',
         method: 'GET',
         success: (item) => {
             item.forEach((taskData) => {
-                if(taskData.Task_Name == "Bellyache"){
+                if (taskData.Task_Name == "Bellyache") {
                     bellyache = bellyache + 1;
-                }
-                else if(taskData.Task_Name == "Discomfort"){
+                } else if (taskData.Task_Name == "Discomfort") {
                     discomfort = discomfort + 1;
-                }
-                else if(taskData.Task_Name == "Burping"){
+                } else if (taskData.Task_Name == "Burping") {
                     burping = burping + 1;
-                }
-                else if(taskData.Task_Name == "Tired"){
+                } else if (taskData.Task_Name == "Tired") {
                     tired = tired + 1;
-                }
-                else if(taskData.Task_Name == "Hungry"){
+                } else if (taskData.Task_Name == "Hungry") {
                     hungry = hungry + 1;
                 }
             });
@@ -58,9 +58,9 @@ function drawChart() {
 
             data.addRows(values);
             console.log(values);
-            
+
             chart.draw(data, options);
         }
-        
+
     });
 }
