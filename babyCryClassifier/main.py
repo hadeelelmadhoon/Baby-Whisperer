@@ -64,7 +64,7 @@ collection = db.sample
 entry = {
     "Task_ID": "4",
     "Task_Name": reason,
-    "Resource": "ache",
+    "Resource": reason,
     "Start_Date": datetime.now(),
     "End_Date": datetime.now(),
     "Duration": "null",

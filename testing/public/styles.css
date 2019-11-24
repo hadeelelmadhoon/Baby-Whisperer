@@ -13,7 +13,7 @@ h2 {
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0) !important;
+    background-color: rgba(232, 89, 79, 0.747) !important;
 }
 
 .items {
@@ -34,7 +34,7 @@ h2 {
     font-size: 30px !important;
     font-family: 'Domine', serif;
     font-weight: bold;
-    color: rgb(29, 29, 29) !important;
+    color: #f6f6f6 !important;
     position: relative;
     padding-left: 35px;
 }
@@ -60,6 +60,10 @@ h2 {
 
 .shadow {
     box-shadow: 0 7px 15px 4px #00000015;
+}
+
+.shadow1 {
+    box-shadow: 0 2px 15px 4px rgba(19, 19, 19, 0.089);
 }
 
 .gantt-chart {}
