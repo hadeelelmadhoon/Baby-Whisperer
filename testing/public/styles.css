@@ -45,7 +45,7 @@ h2 {
 
 .pie {
     position: relative;
-    border-radius: 6%;
+    border-radius: 2%;
     background-color: #fffdf9;
     height: 450px;
     top: 90px;
@@ -69,10 +69,23 @@ h2 {
 .gantt-chart {}
 
 .gantt {
-    border-radius: 6%;
+    border-radius: 2%;
     background-color: #fffdf9;
     height: 450px;
     max-width: 650px;
     top: 90px;
     left: -20px;
+}
+
+.overview {
+    position: relative;
+    top: 100 px;
+    height: 180px;
+    max-width: 21%;
+    border-radius: 2%;
+    margin: 2%;
+}
+
+.avg {
+    align-items: center;
 }
