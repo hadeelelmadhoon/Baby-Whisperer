@@ -1,4 +1,5 @@
 h1 {
+<<<<<<< HEAD
     color: greenyellow;
 }
 h2{
@@ -8,4 +9,8 @@ h2{
 .navbar-brand {
     font-size: 30px !important;
     color: #8D3481 !important;
+=======
+    color: red;
+
+>>>>>>> cd181999eb55bfcf66b6f2d14fe8656aa94880c7
 }
