@@ -5,19 +5,21 @@ from datetime import datetime
 
 import sounddevice as sd
 from scipy.io.wavfile import write
+# Download the helper library from https://www.twilio.com/docs/python/install
+from twilio.rest import Client
 from playsound import playsound
 
-fs = 44100  # Sample rate
-seconds = 7  # Duration of recording
-
-print("Recording now")
-
-myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
-sd.wait()  # Wait until recording is finished
-print("Recording ended")
-write('output.wav', fs, myrecording)  # Save as WAV file
-
-input('pause')
+# fs = 44100  # Sample rate
+# seconds = 7  # Duration of recording
+#
+# print("Recording now")
+#
+# myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=2)
+# sd.wait()  # Wait until recording is finished
+# print("Recording ended")
+# write('output.wav', fs, myrecording)  # Save as WAV file
+#
+# input('pause')
 
 recordingArray = mfccSingle('data/hungry/1abb2260-a652-4ba7-bd98-7d463312730f-1430041727150-1.7-m-04-hu.wav')
 
@@ -62,7 +64,7 @@ collection = db.sample
 entry = {
     "Task_ID": "4",
     "Task_Name": reason,
-    "Resource": "ache",
+    "Resource": reason,
     "Start_Date": datetime.now(),
     "End_Date": datetime.now(),
     "Duration": "null",
@@ -73,3 +75,17 @@ entry = {
 entry_id = collection.insert_one(entry)
 
 print(entry_id)
+
+account_sid = 'AC1181a09cee7b1faf6cb809a0384c81ab'
+auth_token = '09f3de1c6b835d5b9da8f7b941bd521f'
+client = Client(account_sid, auth_token)
+
+message = client.messages \
+    .create(
+         body='Your baby is crying! Reason: ' + reason,
+         from_='+19384448141',
+         to='+12262398589'
+     )
+
+print(message.sid)
+
