@@ -14,7 +14,7 @@ function drawChart() {
 
     var options = {
         pieHole: 0.5,
-        height: 600,
+        height: 500,
         width: 700,
         pieHole: 0.4,
         backgroundColor: 'transparent',

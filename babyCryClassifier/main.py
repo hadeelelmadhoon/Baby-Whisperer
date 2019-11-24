@@ -21,7 +21,7 @@ from playsound import playsound
 #
 # input('pause')
 
-recordingArray = mfccSingle('data/hungry/1abb2260-a652-4ba7-bd98-7d463312730f-1430041727150-1.7-m-04-hu.wav')
+recordingArray = mfccSingle('data/tired/03ADDCFB-354E-416D-BF32-260CF47F7060-1433658024-1.1-f-04-ti.wav')
 
 # load json and create model
 json_file = open('model.json', 'r')
