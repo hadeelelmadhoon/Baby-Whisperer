@@ -1,3 +1,11 @@
 h1 {
-    color: red;
+    color: greenyellow;
+}
+h2{
+    color: #D36DC5;
+    margin: 1em;
+}
+.navbar-brand {
+    font-size: 30px !important;
+    color: #8D3481 !important;
 }
