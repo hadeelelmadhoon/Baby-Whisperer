@@ -47,8 +47,8 @@ h2 {
     position: relative;
     border-radius: 2%;
     background-color: #fffdf9;
-    height: 450px;
-    top: 90px;
+    height: 350px;
+    top: 10px;
     left: 30px;
 }
 
@@ -71,9 +71,8 @@ h2 {
 .gantt {
     border-radius: 2%;
     background-color: #fffdf9;
-    height: 450px;
-    max-width: 650px;
-    top: 90px;
+    height: 350px;
+    top: 10px;
     left: -20px;
 }
 
@@ -84,15 +83,34 @@ h2 {
     max-width: 21%;
     border-radius: 2%;
     margin: 2%;
+    background-color: #fffdf9;
 }
 
 .avg {
     align-items: center;
+    margin-top: 10px;
+    padding: 0;
 }
 
 #chart_div {
     height: 350px;
     width: 650px;
-    top: -70px;
+    top: -20px;
     left: -20px;
+}
+
+.drop {
+    background-color: #fffdf9;
+    position: relative;
+    left: 1100px;
+    top: 15px;
+    margin-bottom: 5px;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 0;
 }
