@@ -12,9 +12,28 @@ function drawChart() {
         backgroundColor: 'transparent',
         height: 300,
         width: 600,
-        hAxis: { title: 'Time (24 Hours)', minValue: 0, maxValue: 24 },
-        vAxis: { title: 'Reason', minValue: 0, maxValue: 6 },
-        legend: 'none'
+        vAxis: {
+            title: 'Reason',
+            minValue: 0,
+            maxValue: 6,
+            ticks: [{ v: 1, f: 'Bellyache' },
+                { v: 2, f: 'Discomfort' }, { v: 3, f: 'Burping' },
+                { v: 4, f: 'Tired' }, { v: 5, f: 'Hungry' }
+            ]
+        },
+        legend: 'none',
+        colors: ['#88BDBC'],
+        hAxis: {
+            title: 'Time (24 Hours)',
+            ticks: [{ v: 1, f: '1 AM' },
+                { v: 5, f: '5 AM' },
+                { v: 10, f: '10 AM' },
+                { v: 15, f: '3 PM' },
+                { v: 20, f: '8 PM' },
+                { v: 24, f: '12 PM' }
+            ],
+            viewWindow: { max: 24 }
+        }
     };
 
     var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
