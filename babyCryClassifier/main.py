@@ -76,14 +76,14 @@ entry_id = collection.insert_one(entry)
 
 print(entry_id)
 
-account_sid = 'AC1181a09cee7b1faf6cb809a0384c81ab'
-auth_token = '09f3de1c6b835d5b9da8f7b941bd521f'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 message = client.messages \
     .create(
          body='Your baby is crying! Reason: ' + reason,
-         from_='+19384448141',
+         from_='',
          to=''
      )
 
