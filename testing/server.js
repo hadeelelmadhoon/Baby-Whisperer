@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var port = 8080;
 var app = express();
 
-const url = 'mongodb+srv://anotheruser:abcd1234@productstutorial-78qhy.mongodb.net/hackwestern?retryWrites=true&w=majority;'
+const url = ''
 
 mongoose.connect(url);
 var db = mongoose.connection;
