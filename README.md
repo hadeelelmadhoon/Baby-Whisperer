@@ -17,3 +17,6 @@ Full stack website using Node.js, express, MongoDB, and Google Charts to display
 1) Download the zip file
 2) Run BabyCryClassifier/main.py to record and classifier crying audio (python main.py in terminal)
 3) Run Testing/server.js (node server.js) and open browser at http://localhost:8080/chart/ 
+
+# Devpost Submission
+https://devpost.com/software/hackwestern-e3faqy
