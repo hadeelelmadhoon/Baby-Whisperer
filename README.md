@@ -4,4 +4,16 @@ The Baby Whisperer is a revamped baby monitor that uses voice enabled technology
 
 # Folder Descriptions
 
+## BabyCryClassifier
+
+Python files that listen to audio files, convert audio into MFCC, classify the audio using a Convolutional Neural Network, and send a text message notification about the crying baby along with the classification. Data folder contains sample baby cry audio.
+
 ## Testing
+
+Full stack website using Node.js, express, MongoDB, and Google Charts to display analytics of the results from the BabyCryClassifier files.
+
+# How to run
+
+1) Download the zip file
+2) Run BabyCryClassifier/main.py to record and classifier crying audio (python main.py in terminal)
+3) Run Testing/server.js (node server.js) and open browser at http://localhost:8080/chart/ 
